@@ -1,23 +1,19 @@
-
-import './App.css';
+import React from 'react';
+import Nav from './components/Nav';
+import About from './components/About';
+import coverImage from "./assets/cover/techbg.jpg";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav></Nav>
+      <main>
+      <section className="my-5">
+        <h1 id="about">Who am I?</h1>
+        <img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover" />
+      </section>
+      </main>
     </div>
   );
 }
