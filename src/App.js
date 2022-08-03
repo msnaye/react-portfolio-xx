@@ -1,6 +1,6 @@
 import React from 'react';
-import Nav from './components/Nav';
-import About from './components/About';
+import Nav from './components/Nav/Navbar';
+import About from './components/About/About';
 import coverImage from "./assets/cover/techbg.jpg";
 
 function App() {
