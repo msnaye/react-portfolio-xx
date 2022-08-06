@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../styles/Contact.css';
 
-import { validateEmail } from './utils/helpers';
+import { validateEmail } from '../../utils/helpers';
 
 function Contact() {
   const [formState, setFormState] = useState(
@@ -15,7 +15,7 @@ function Contact() {
   
   const { name, email, message } = formState;
 
-  const handleSubmit = (e) => {
+  const handleSend = (e) => {
     e.preventDefault();
     if (!errorMessage) {
       console.log('Submit Form', formState);
@@ -47,9 +47,9 @@ function Contact() {
   };
 
   return (
-    <section className="my-4">
+    <section className="contactContainer">
       <h1>Contact Me</h1>
-      <form id="contact-form" onSubmit={handleSubmit}>
+      <form className="contact-form" onSubmit={handleSend}>
         <div>
           <label htmlFor="name">Name:</label> <br></br>
           <input type="text" name="name" defaultValue={name} onBlur={handleChange} />

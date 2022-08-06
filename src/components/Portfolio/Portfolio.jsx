@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../styles/Portfolio.css';
-import PhotoList from '..'
+// import PhotoList from '..'
 
 function Portfolio () {
     return(
