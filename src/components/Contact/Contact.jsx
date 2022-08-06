@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import '../../styles/Contact.css';
 
 import { validateEmail } from './utils/helpers';
 
-function ContactForm() {
+function Contact() {
   const [formState, setFormState] = useState(
     {
        name: '',
@@ -76,4 +77,4 @@ function ContactForm() {
   );
 }
 
-export default ContactForm;
+export default Contact;
