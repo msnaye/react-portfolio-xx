@@ -3,7 +3,7 @@ import '../../styles/Navbar.css';
 // import {slide as Menu} from 'react-burger-menu';
 
 import {FaBars, FaTimes, FaLinkedin, FaGithub, FaFacebook} from 'react-icons/fa';
-//mport { capitalizeFirstLetter } from '../../utils/helpers';
+//import { capitalizeFirstLetter } from '../../utils/helpers';
 
 
 const Navbar = () =>{

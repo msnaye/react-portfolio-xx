@@ -1,27 +1,17 @@
 import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import About from './components/About/About';
-import Contact from './components/Contact/Contact';
-import Portfolio from './components/Portfolio/Portfolio';
-import Resume from './components/Resume/Resume';
 import coverImage from "./assets/cover/techbg.jpg";
+import PageContainer from './components/PageContainer';
+import {BrowserRouter as Router} from 'react-router-dom';
 
-const App=()=> {
+function App (){
 
- 
-    <div>
-      <About />;
-      <Contact />;
-      <Navbar />;
-      <Portfolio />;
-      <Resume />;
-      
-        
-        <img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover" />
-    
-      
-    </div>
-}
+  <Router>
+    <PageContainer />
+    <img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover" />
+  </Router>
+
+
+};
 
 
 export default App;
