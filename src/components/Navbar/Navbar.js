@@ -1,65 +1,78 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import '../../styles/Navbar.css';
 // import {slide as Menu} from 'react-burger-menu';
+import { Link } from 'react-scroll';
 
-import {FaBars, FaTimes, FaLinkedin, FaGithub, FaFacebook} from 'react-icons/fa';
+import { FaBars, FaTimes, FaLinkedin, FaGithub, FaFacebook } from 'react-icons/fa';
 //import { capitalizeFirstLetter } from '../../utils/helpers';
 
 
-const Navbar = () =>{
-  const [nav, setNav] =useState(false);
-  const handleClick = ()=> setNav(!nav);
+const Navbar = () => {
+  const [nav, setNav] = useState(false);
+  const handleClick = () => setNav(!nav);
 
   return (
     <div className='mainContainer'>
+      {/* Main Menu */}
 
-     
-        <h2>
-          <p>
-            <h1 > Mayra Ibarra </h1>
-          </p>
-        </h2>
-        {/* Main Menu */}
-        
-          <ul className="menuContainer">
-            <li className=''>About Me</li>
-            <li className=''>Portfolio</li>
-            <li className=''>Contact</li>
-            <li className=''>Resume</li>
-          </ul>
+      <ul className="menuContainer">
+        <li>
+          <Link to="About"> About Me </Link>
+        </li>
+        <li>
+          <Link to="Portfolio">Portfolio </Link>
+        </li>
+        <li>
+          <Link to="Resume" >Resume </Link>
+        </li>
+        <li>
+          <Link to="Contact" >Contact Me </Link>
+        </li>
+      </ul>
 
-          {/*website links*/}
-          <div className='links'>
-            <li>
-              <a className='' href='/'>Github <FaGithub /></a>
-            </li>
+      {/*website links*/}
+      <div className='links'>
+        <ul>
+          <li>
+            <a className='' href='https://github.com/msnaye'>Github <FaGithub /></a>
+          </li>
 
-            <li>
-              <a className='' href='/'>Facebook <FaFacebook /></a>
-            </li>
+          <li>
+            <a className='' href='/'>Facebook <FaFacebook /></a>
+          </li>
 
-            <li>
-              <a className='' href='/'>FaLinkedin <FaLinkedin /></a>
-            </li>
+          <li>
+            <a className='' href='https://www.linkedin.com/feed/'>Linkedin <FaLinkedin /></a>
+          </li>
+        </ul>
+      </div>
 
-          {/* Hamburger Menu */}
-          <div onClick={handleClick} className='hamburgerMenu'>
-            {!nav ? <FaBars /> : <FaTimes />}
-          
+      {/* Hamburger Menu */}
+      <div onClick={handleClick} className='hamburgerMenu'>
+        {!nav ? <FaBars /> : <FaTimes />}
+      </div>
 
-          {/* Mobile Menu */}
 
-          <ul className={!nav ? 'hidden' : 'absolute'}>
-            <li className=''>About</li>
-            <li className=''>Portfolio</li>
-            <li ClassName=''>Resume</li>
-            <li className=''>Contact</li>
-          </ul> 
-
-        </div>
-      
+      {/* Mobile Menu */}
+      <ul>
+        <li className={!nav ? 'hidden' : 'absolute'}>
+          </li>
+          <li>
+         <Link onclick={handleClick} to="About">About Me</Link>
+         </li>
+         <li>
+         <Link onClick={handleClick} tp="Portfolio">Portfolio </Link>
+         </li>
+         <li>
+         <Link onClick={handleClick} to="Resume">Resume </Link>
+         </li>
+         <li>
+         <Link onClick={handleClick} to="Contact">Contact </Link>
+        </li>
+      </ul>
     </div>
-    </div>
+
+
   );
 }
 export default Navbar;
