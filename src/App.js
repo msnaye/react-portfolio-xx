@@ -5,7 +5,7 @@ import Contact from './components/Contact/Contact';
 import Portfolio from './components/Portfolio/Portfolio';
 import Resume from './components/Resume/Resume';
 import coverImage from "./assets/cover/techbg.jpg";
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
